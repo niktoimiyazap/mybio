@@ -1398,6 +1398,7 @@ body.home-ready .hero__title--glitch::after {
     gap: 18px;
     align-items: start;
     min-height: 0;
+    padding: 18px;
   }
 
   .track--featured .track__title {
@@ -1421,13 +1422,15 @@ body.home-ready .hero__title--glitch::after {
   }
 
   .music-hero__body {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 14px;
   }
 
   .track-toolbar {
-    align-items: flex-start;
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
   }
 
   .track-filters__menu {
@@ -1439,19 +1442,9 @@ body.home-ready .hero__title--glitch::after {
     max-width: none;
   }
 
-  .track--featured {
-    grid-template-columns: 1fr;
-    min-height: 0;
-    padding: 18px;
-  }
-
-  .track--featured .track__title {
-    max-width: 14ch;
-  }
-
-  .track--featured .track__player {
-    grid-template-columns: 56px minmax(0, 1fr);
-    gap: 14px;
+  .track-group {
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
   }
 
 }
@@ -1481,7 +1474,8 @@ body.home-ready .hero__title--glitch::after {
   }
 
   .music-hero__body {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
     width: 100%;
   }
@@ -1526,6 +1520,8 @@ body.home-ready .hero__title--glitch::after {
 
   .track-group {
     gap: 10px;
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
   }
 
   .track-group__date {
