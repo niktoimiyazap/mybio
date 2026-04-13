@@ -700,6 +700,7 @@
         var activeAudio = null;
         var activeFilterMode = "all";
         var loadingFrames = ["[=---]", "[-=--]", "[--=-]", "[---=]"];
+        var pendingFrame = "[....]";
         var loadingFrameIndex = 0;
         var monthNames = {
           january: 0,
@@ -1019,7 +1020,7 @@
             track.setAttribute("data-loading-label", label);
           }
 
-          setTrackAudioState("pending", loadingFrames[0]);
+          setTrackAudioState("pending", pendingFrame);
 
           function ensureAudioLoaded(playImmediately) {
             if (!source) return Promise.resolve(false);
@@ -1100,18 +1101,6 @@
             });
           });
 
-          track.addEventListener("pointerenter", function () {
-            ensureAudioLoaded(false);
-          }, { once: true });
-
-          track.addEventListener("focusin", function () {
-            ensureAudioLoaded(false);
-          }, { once: true });
-
-          track.addEventListener("touchstart", function () {
-            ensureAudioLoaded(false);
-          }, { once: true });
-
           audio.addEventListener("loadedmetadata", function () {
             audio.setAttribute("data-audio-ready", "true");
             setTrackAudioState("ready", "");
@@ -1155,7 +1144,7 @@
           tracks.forEach(function (track) {
             var state = track.getAttribute("data-audio-state");
 
-            if (state === "pending" || state === "loading") {
+            if (state === "loading") {
               track.setAttribute("data-loading-label", loadingFrames[loadingFrameIndex]);
             }
           });
