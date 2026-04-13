@@ -960,6 +960,7 @@ body.home-ready .hero__title--glitch::after {
 }
 
 .track {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
@@ -979,6 +980,59 @@ body.home-ready .hero__title--glitch::after {
     gap 320ms ease,
     min-height 320ms ease,
     height 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.track::before,
+.track::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity 260ms ease,
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 260ms ease;
+}
+
+.track::before {
+  content: "";
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--bg) 18%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 62%, transparent) 100%
+    );
+  backdrop-filter: blur(3px);
+}
+
+.track::after {
+  content: attr(data-loading-label);
+  inset: auto 16px 14px 16px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  white-space: pre;
+  transform: translateY(6px);
+}
+
+.track[data-audio-state="pending"]::before,
+.track[data-audio-state="pending"]::after,
+.track[data-audio-state="loading"]::before,
+.track[data-audio-state="loading"]::after,
+.track[data-audio-state="error"]::before,
+.track[data-audio-state="error"]::after {
+  opacity: 1;
+}
+
+.track[data-audio-state="pending"]::after,
+.track[data-audio-state="loading"]::after,
+.track[data-audio-state="error"]::after {
+  transform: translateY(0);
+}
+
+.track[data-audio-state="error"]::after {
+  color: color-mix(in srgb, var(--text) 72%, #c93030 28%);
 }
 
 .track--featured {
@@ -1002,7 +1056,17 @@ body.home-ready .hero__title--glitch::after {
 }
 
 .track--featured::after {
-  content: none;
+  inset: auto 22px 20px 22px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.track--featured::before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.14) 0%,
+      rgba(0, 0, 0, 0.46) 100%
+    );
 }
 
 .track[data-state="playing"] .track__title {

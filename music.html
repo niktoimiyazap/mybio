@@ -699,6 +699,8 @@
         var tracks = [];
         var activeAudio = null;
         var activeFilterMode = "all";
+        var loadingFrames = ["[=---]", "[-=--]", "[--=-]", "[---=]"];
+        var loadingFrameIndex = 0;
         var monthNames = {
           january: 0,
           february: 1,
@@ -1012,6 +1014,13 @@
 
           if (!audio || !playButton || !seek || !current || !duration) return;
 
+          function setTrackAudioState(state, label) {
+            track.setAttribute("data-audio-state", state);
+            track.setAttribute("data-loading-label", label);
+          }
+
+          setTrackAudioState("pending", loadingFrames[0]);
+
           function ensureAudioLoaded(playImmediately) {
             if (!source) return Promise.resolve(false);
 
@@ -1023,10 +1032,12 @@
               if (playImmediately) {
                 audio.preload = "auto";
               }
+              setTrackAudioState("ready", "");
               return Promise.resolve(true);
             }
 
             audio.preload = playImmediately ? "auto" : "metadata";
+            setTrackAudioState("loading", loadingFrames[loadingFrameIndex]);
 
             return new Promise(function (resolve) {
               var settled = false;
@@ -1042,10 +1053,12 @@
 
               function handleReady() {
                 audio.setAttribute("data-audio-ready", "true");
+                setTrackAudioState("ready", "");
                 finish(true);
               }
 
               function handleError() {
+                setTrackAudioState("error", "[error]");
                 finish(false);
               }
 
@@ -1101,6 +1114,7 @@
 
           audio.addEventListener("loadedmetadata", function () {
             audio.setAttribute("data-audio-ready", "true");
+            setTrackAudioState("ready", "");
             renderTrackTime();
           });
           audio.addEventListener("durationchange", renderTrackTime);
@@ -1134,6 +1148,18 @@
 
           renderTrackTime();
         });
+
+        window.setInterval(function () {
+          loadingFrameIndex = (loadingFrameIndex + 1) % loadingFrames.length;
+
+          tracks.forEach(function (track) {
+            var state = track.getAttribute("data-audio-state");
+
+            if (state === "pending" || state === "loading") {
+              track.setAttribute("data-loading-label", loadingFrames[loadingFrameIndex]);
+            }
+          });
+        }, 140);
       })();
     </script>
   </body>
