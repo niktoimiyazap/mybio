@@ -935,6 +935,8 @@ body.home-ready .hero__title--glitch::after {
 .track-group {
   display: grid;
   gap: 12px;
+  content-visibility: auto;
+  contain-intrinsic-size: 420px;
 }
 
 .track-group__date {
@@ -1261,6 +1263,8 @@ body.home-ready .hero__title--glitch::after {
   flex-wrap: wrap;
   gap: 8px;
   align-items: flex-start;
+  content-visibility: auto;
+  contain-intrinsic-size: 240px;
 }
 
 .junkyard__badges .badge__image:nth-child(2n) {
