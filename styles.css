@@ -1488,6 +1488,8 @@ body.home-ready .hero__title--glitch::after {
 
   .badge-link--section {
     gap: 4px;
+    justify-self: end;
+    text-align: right;
   }
 
   .track-toolbar {
