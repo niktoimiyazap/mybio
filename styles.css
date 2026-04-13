@@ -1002,7 +1002,6 @@ body.home-ready .hero__title--glitch::after {
       color-mix(in srgb, var(--bg) 18%, transparent) 0%,
       color-mix(in srgb, var(--bg) 62%, transparent) 100%
     );
-  backdrop-filter: blur(3px);
 }
 
 .track::after {
