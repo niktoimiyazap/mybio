@@ -1,0 +1,56 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="240" y1="120" x2="1360" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F4EE"/>
+      <stop offset="0.45" stop-color="#ECE7DE"/>
+      <stop offset="1" stop-color="#D7D1C6"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(522 492) rotate(50.26) scale(607.927 496.56)">
+      <stop stop-color="#FFF9ED" stop-opacity="0.88"/>
+      <stop offset="0.48" stop-color="#FFF9ED" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#FFF9ED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1120 776) rotate(141.139) scale(480.267 412.803)">
+      <stop stop-color="#A49A8C" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#A49A8C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurLarge" x="225" y="213" width="1150" height="774" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="44" result="effect1_foregroundBlur_0_1"/>
+    </filter>
+    <filter id="softShadow" x="192" y="145" width="1216" height="910" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="34"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.249059 0 0 0 0 0.225882 0 0 0 0 0.192941 0 0 0 0.18 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glowA)"/>
+  <rect width="1600" height="1200" fill="url(#glowB)"/>
+  <g filter="url(#softShadow)">
+    <circle cx="800" cy="600" r="376" fill="#151515"/>
+    <circle cx="800" cy="600" r="356" stroke="#50493F" stroke-opacity="0.34" stroke-width="2"/>
+  </g>
+  <g filter="url(#blurLarge)" opacity="0.42">
+    <path d="M430 700C485 868 620 955 800 955C980 955 1115 868 1170 700" stroke="#EEE7DA" stroke-width="54" stroke-linecap="round"/>
+  </g>
+  <path d="M455 688C512 850 634 923 800 923C966 923 1088 850 1145 688" stroke="#F0E8DA" stroke-width="36" stroke-linecap="round"/>
+  <path d="M488 678C540 810 648 878 800 878C952 878 1060 810 1112 678" stroke="#0C0C0C" stroke-width="28" stroke-linecap="round"/>
+  <ellipse cx="642" cy="492" rx="52" ry="114" fill="#F0E8DA"/>
+  <ellipse cx="958" cy="492" rx="52" ry="114" fill="#F0E8DA"/>
+  <ellipse cx="642" cy="520" rx="20" ry="50" fill="#111111"/>
+  <ellipse cx="958" cy="520" rx="20" ry="50" fill="#111111"/>
+  <circle cx="629" cy="477" r="8" fill="#FFF9EF"/>
+  <circle cx="945" cy="477" r="8" fill="#FFF9EF"/>
+  <path d="M754 598C770 560 830 560 846 598" stroke="#EEE3D3" stroke-width="16" stroke-linecap="round"/>
+  <path d="M768 620C780 604 820 604 832 620" stroke="#0F0F0F" stroke-width="11" stroke-linecap="round"/>
+  <path d="M404 302C496 228 620 190 762 184" stroke="#D5CEC1" stroke-width="12" stroke-linecap="round" opacity="0.86"/>
+  <path d="M1192 302C1100 228 976 190 834 184" stroke="#D5CEC1" stroke-width="12" stroke-linecap="round" opacity="0.86"/>
+  <path d="M308 918C454 1018 624 1071 812 1078" stroke="#C9C1B4" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+  <path d="M1292 918C1146 1018 976 1071 788 1078" stroke="#C9C1B4" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+</svg>

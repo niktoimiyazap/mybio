@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>niktoimiya projects</title>
+    <meta
+      name="description"
+      content="Placeholder projects page for Vladislav aka @niktoimiya."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="themebar themebar--split">
+        <a class="theme-link" href="index.html" aria-label="Back to bio">
+          <span class="link-morph">
+            <span class="link-morph__base">&lt;- back</span>
+            <span class="link-morph__alt" aria-hidden="true">&lt;- back</span>
+          </span>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="theme-toggle__label">theme</span>
+          <span class="theme-toggle__track" aria-hidden="true">
+            <span class="theme-toggle__thumb"></span>
+          </span>
+        </button>
+      </div>
+
+      <section class="layout">
+        <div class="layout__main">
+          <section class="hero hero--section-page">
+            <div class="hero__content hero__content--section">
+              <h1 class="hero__title hero__title--section">Projects</h1>
+              <p class="hero__lead hero__lead--section">
+                nothing here yet, but i will dig up the archives soon.
+              </p>
+            </div>
+          </section>
+
+          <section class="projects-art" aria-label="Projects page not found">
+            <p class="projects-art__code">404</p>
+            <p class="projects-art__title">projects not found</p>
+            <p class="projects-art__caption">nothing is here yet. check back later.</p>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.querySelector(".theme-toggle");
+        var storageKey = "niktoimiya-theme";
+        var savedTheme = localStorage.getItem(storageKey);
+        var hour = new Date().getHours();
+        var autoTheme = hour >= 7 && hour < 19 ? "light" : "dark";
+        var initialTheme = savedTheme || autoTheme;
+
+        root.setAttribute("data-theme", initialTheme);
+
+        if (!toggle) return;
+
+        toggle.addEventListener("click", function () {
+          var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+          var next = current === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          localStorage.setItem(storageKey, next);
+        });
+      })();
+    </script>
+  </body>
+</html>
