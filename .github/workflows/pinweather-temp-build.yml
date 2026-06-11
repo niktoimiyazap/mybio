@@ -1,0 +1,46 @@
+name: Temporary PinWeather macOS build
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.pinweather-build-trigger'
+      - '.github/workflows/pinweather-temp-build.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - name: Build and publish native Intel app
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euxo pipefail
+          git clone --depth 1 --branch pinweather2-native https://github.com/niktoimiyazap/codex-app-for-intel.git source
+          cd source
+          chmod +x pinweather2-native/build.sh
+          ./pinweather2-native/build.sh
+
+          APP="pinweather2-native/build/PinWeather.app"
+          BIN="$APP/Contents/MacOS/PinWeather"
+          ZIP="pinweather2-native/build/PinWeather-2.0-macOS12-Intel.zip"
+          SHA="pinweather2-native/build/PinWeather-2.0-macOS12-Intel.sha256"
+
+          test -d "$APP"
+          test -f "$ZIP"
+          file "$BIN"
+          lipo -archs "$BIN" | grep -qx x86_64
+          plutil -extract LSMinimumSystemVersion raw "$APP/Contents/Info.plist" | grep -qx 12.0
+          codesign --verify --deep --strict "$APP"
+          rm -rf /tmp/pinweather-check
+          ditto -x -k "$ZIP" /tmp/pinweather-check
+          test -x /tmp/pinweather-check/PinWeather.app/Contents/MacOS/PinWeather
+
+          gh release delete pinweather2-latest -y --cleanup-tag || true
+          gh release create pinweather2-latest "$ZIP" "$SHA" \
+            --target main \
+            --title "PinWeather 2.0 — macOS 12 Intel" \
+            --notes "Native AppKit build for Intel Macs running macOS 12 or newer."
