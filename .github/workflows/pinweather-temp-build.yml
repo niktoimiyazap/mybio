@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - '.pinweather-build-trigger'
+      - 'temporary-note.md'
       - '.github/workflows/pinweather-temp-build.yml'
 
 permissions:
