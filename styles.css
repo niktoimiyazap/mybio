@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=Unbounded:wght@400;500;700&display=swap");
 
 :root {
   --bg: #ffffff;
@@ -465,11 +465,10 @@ img {
   letter-spacing: -0.04em;
   word-break: break-word;
   font-family:
-    "Iowan Old Style",
-    "Palatino Linotype",
-    "Book Antiqua",
-    "Times New Roman",
-    serif;
+    "Barlow Condensed",
+    "Arial Narrow",
+    "Roboto Condensed",
+    sans-serif;
 }
 
 .hero__title--home {
@@ -513,12 +512,11 @@ body.home-ready .hero__title--glitch::after {
   line-height: 0.9;
   letter-spacing: -0.05em;
   font-family:
-    "Baskerville",
-    "Iowan Old Style",
-    "Palatino Linotype",
-    "Times New Roman",
-    serif;
-  font-style: italic;
+    "Barlow Condensed",
+    "Arial Narrow",
+    "Roboto Condensed",
+    sans-serif;
+  font-style: normal;
   text-align: left;
 }
 
@@ -1045,7 +1043,7 @@ body.home-ready .hero__title--glitch::after {
   min-height: 210px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
-    url("assets/backgrounds/meme-fire.gif"),
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.12), transparent 34%),
     #000000;
   background-position: center;
   background-size: cover;
@@ -1080,7 +1078,7 @@ body.home-ready .hero__title--glitch::after {
 .track--featured[data-state="playing"] {
   background:
     linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
-    url("assets/backgrounds/meme-fire.gif"),
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.12), transparent 34%),
     #000000;
   background-position: center;
   background-size: cover;
@@ -1135,11 +1133,10 @@ body.home-ready .hero__title--glitch::after {
   font-weight: 400;
   line-height: 1.2;
   font-family:
-    "Iowan Old Style",
-    "Palatino Linotype",
-    "Book Antiqua",
-    "Times New Roman",
-    serif;
+    "Barlow Condensed",
+    "Arial Narrow",
+    "Roboto Condensed",
+    sans-serif;
   transition:
     color 220ms ease,
     transform 380ms cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -1348,13 +1345,12 @@ body.home-ready .hero__title--glitch::after {
   display: block;
   margin-top: auto;
   font-family:
-    "Baskerville",
-    "Iowan Old Style",
-    "Palatino Linotype",
-    "Times New Roman",
-    serif;
+    "Barlow Condensed",
+    "Arial Narrow",
+    "Roboto Condensed",
+    sans-serif;
   font-size: clamp(42px, 7vw, 86px);
-  font-style: italic;
+  font-style: normal;
   line-height: 0.88;
   letter-spacing: -0.06em;
 }
@@ -1527,9 +1523,9 @@ body.home-ready .hero__title--glitch::after {
   }
 
   .hero__lead--section {
-    max-width: 24ch;
-    font-size: 13px;
-    line-height: 1.65;
+    max-width: 28ch;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .badge-link--section {
@@ -1544,14 +1540,14 @@ body.home-ready .hero__title--glitch::after {
   }
 
   .track-note {
-    max-width: 28ch;
-    font-size: 10px;
-    line-height: 1.5;
+    max-width: 32ch;
+    font-size: 12px;
+    line-height: 1.55;
   }
 
   .track-filters__summary,
   .track-filters__option {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .track-filters__menu {
@@ -1573,7 +1569,7 @@ body.home-ready .hero__title--glitch::after {
   }
 
   .track-group__date {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .track-group__date--release::after {
@@ -1610,7 +1606,7 @@ body.home-ready .hero__title--glitch::after {
 
   .track__time {
     margin-top: 4px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .track--featured {
@@ -1666,7 +1662,8 @@ body.home-ready .hero__title--glitch::after {
   }
 
   .project-case__text {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.55;
   }
 }
 
