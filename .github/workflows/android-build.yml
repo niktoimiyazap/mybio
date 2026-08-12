@@ -1,0 +1,11 @@
+name: Android Build Probe
+on:
+  push:
+    branches:
+      - tmp-android-build
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo runner-ok
