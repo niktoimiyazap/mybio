@@ -1,829 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>niktoimiya — Vladislav</title>
-    <meta
-      name="description"
-      content="Vladislav / @niktoimiya — frontend, AI systems, interfaces and music from Khabarovsk."
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="rebrand.css" />
-  </head>
-  <body class="home-loading">
-    <div class="ascii-loader" aria-hidden="true">
-      <div class="ascii-loader__inner">
-        <p class="ascii-loader__label">loading bio</p>
-        <pre class="ascii-loader__indicator">[=---]</pre>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Владислав / @niktoimiya — музыка, дизайн, код и продукты." />
+  <title>Владислав — @niktoimiya</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/sections.css" />
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="orb-flight-layer" aria-hidden="true">
+    <div class="orb orb--shared" data-shared-orb="accent"></div>
+    <div class="orb orb--shared" data-shared-orb="violet"></div>
+  </div>
+
+  <header class="topbar">
+    <a href="#top" class="brand">@niktoimiya</a>
+    <nav>
+      <a href="#music">музыка</a>
+      <a href="#design">дизайн</a>
+      <a href="#code">код</a>
+      <a href="#skills">навыки</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell" data-section="hero" data-header-theme="light">
+      <div class="hero__center reveal reveal--hero">
+        <img class="avatar" src="assets/avatar-new.jpg" alt="" />
+        <h1>Привет, я Владислав!</h1>
+        <p>Давай расскажу немного о себе</p>
+        <span>Просто листай вниз</span>
       </div>
-    </div>
+    </section>
 
-    <main class="surface-page">
-      <header class="surface-nav">
-        <a class="surface-nav__brand" href="#top" aria-label="Back to start">@niktoimiya</a>
-        <nav class="surface-nav__links" aria-label="Main navigation">
-          <a href="projects.html">projects</a>
-          <a href="music.html">music</a>
-          <button class="theme-toggle" type="button" aria-label="Toggle theme">
-            <span class="theme-toggle__label">theme</span>
-            <span class="theme-toggle__track" aria-hidden="true">
-              <span class="theme-toggle__thumb"></span>
-            </span>
-          </button>
-        </nav>
-      </header>
+    <section id="music" class="section-shell music-section" data-section="music" data-header-theme="light">
+      <div class="section-inner">
+        <div class="section-heading reveal reveal--title">
+          <h2>Я композитор</h2>
+          <p class="lead">Занимаюсь музыкой уже 2 года, делаю клубную музыку, эпическую, а также эмбиентную.</p>
+        </div>
 
-      <section class="one-frame" id="top" aria-label="Vladislav portfolio story">
-        <div class="one-frame__pin">
-          <h1 class="identity-title">Vladislav</h1>
-
-          <div class="media-decor" aria-hidden="true">
-            <span class="media-decor__flat"></span>
-            <span class="media-decor__outline"></span>
-            <span class="media-decor__orb"></span>
-            <span class="media-decor__chip"></span>
-          </div>
-
-          <figure class="media-frame" aria-label="Portrait and selected visual work">
-            <div class="media-frame__inner">
-              <img
-                class="media-image media-image--portrait"
-                src="assets/avatar-new.jpg"
-                fetchpriority="high"
-                decoding="async"
-                alt="Portrait"
-              />
-              <img
-                class="media-image media-image--city"
-                src="assets/khabarovsk.jpg"
-                loading="lazy"
-                decoding="async"
-                alt="Khabarovsk"
-              />
+        <div class="music-layout">
+          <div class="music-left">
+            <div class="stats-row reveal">
+              <div class="stat stat--coral material-card">
+                <strong>80+</strong>
+                <span>треков</span>
+                <small>в моем портфолио</small>
+              </div>
+              <a class="arrow-card material-card" href="music.html" aria-label="Открыть музыкальное портфолио"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 46 L46 18 M27 18 H46 V37"/></svg></a>
             </div>
-          </figure>
 
-          <div class="work-three work-three--desktop work-three--free" aria-hidden="true">
-            <canvas class="work-three__canvas"></canvas>
+            <p class="body-copy reveal">Люблю разную музыку, особенно ту, которой можно проникнуться. Именно поэтому я люблю жанр новостной музыки — он почти всегда умеет удержать зрителя в напряжении. Эмбиент для меня запоминается той самой загадочной пустотой, когда трек не пытается скрыться за инструменталом и дорогими сэмплами, а просто вываливает свою глубину и смысл.</p>
+
           </div>
 
-          <div class="work-hover-layer work-hover-layer--software" aria-hidden="true">
-            <div class="software-cloud">
-              <div class="software-cloud__item software-cloud__item--codex">
-                <img src="assets/logos/codex-color.png" alt="" />
-                <span>Codex CLI</span>
-              </div>
-              <div class="software-cloud__item software-cloud__item--gemini">
-                <img src="assets/logos/gemini.svg" alt="" />
-                <span>Gemini</span>
-              </div>
-              <div class="software-cloud__item software-cloud__item--chatgpt">
-                <img src="assets/logos/chatgpt-color.jpg" alt="" />
-                <span>ChatGPT</span>
-              </div>
-              <div class="software-cloud__item software-cloud__item--cursor">
-                <img src="assets/logos/cursor.svg" alt="" />
-                <span>Cursor</span>
-              </div>
-              <div class="software-cloud__item software-cloud__item--fl">
-                <img src="assets/logos/fl-studio.png" alt="" />
-                <span>FL Studio</span>
-              </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="design" class="section-shell design-section" data-section="design" data-header-theme="light">
+      <div class="section-inner design-grid">
+        <div class="design-copy">
+          <div class="section-heading reveal reveal--title">
+            <h2>Я дизайнер</h2>
+            <p class="lead">Создаю дизайн уже более 5-ти лет в разном виде, от самого раннего и сырого до, как по мне, эстетичного.</p>
+          </div>
+
+          <div class="stats-row reveal">
+            <div class="stat stat--mint material-card">
+              <strong>5+</strong>
+              <span>сайтов</span>
+              <small>для которых создавался брендинг</small>
+            </div>
+            <div class="stat stat--outline material-card">
+              <strong>80+</strong>
+              <span>работ за<br />все время</span>
             </div>
           </div>
 
-          <figure class="work-hover-layer work-hover-layer--design" aria-hidden="true">
-            <img src="assets/case1.jpg" alt="" />
-          </figure>
+          <p class="body-copy reveal">Для меня дизайн — это, конечно, не только релиз-постеры, концепты и т.д. Я начинал еще лет в 8 в Picsart, и тогда арты с самим собой казались вершиной графического дизайна. Сейчас мне куда интереснее думать о том, как должны выглядеть и дышать витрины продуктов. Один из самых важных кейсов для меня — Копелла: там я в целом научился нормально работать с версткой и понимать, как сделать приложение так, чтобы его не назвали нейрослопом.</p>
+        </div>
 
-          <div class="story-panel">
-            <section class="story-state story-state--identity is-active" data-state="identity">
-              <p class="story-lead js-reveal-lines">
-                I build interfaces, AI systems and personal things with code,
-                sound and visuals.
-              </p>
-              <dl class="story-meta">
-                <div><dt>based</dt><dd>Khabarovsk / RU</dd></div>
-                <div><dt>handle</dt><dd>@niktoimiya</dd></div>
-                <div><dt>focus</dt><dd>frontend / AI / music</dd></div>
-              </dl>
-            </section>
+        <div class="work-stack reveal" aria-label="Фрагменты дизайн-работ">
+          <img class="work work--a" src="assets/music-work-1.jpg" alt="" data-parallax="0.05" />
+          <img class="work work--b" src="assets/music-work-2.jpg" alt="" data-parallax="-0.04" />
+          <img class="work work--c" src="assets/music-work-3.jpg" alt="" data-parallax="0.03" />
+          <img class="work work--d" src="assets/music-work-4.jpg" alt="" data-parallax="-0.025" />
+        </div>
+      </div>
+    </section>
 
-            <section class="story-state story-state--work" data-state="work">
-              <h2 class="story-heading">What I make</h2>
-              <p class="story-intro">Interfaces, AI systems, visual design and sound.</p>
+    <section id="code" class="section-shell code-section" data-section="code" data-header-theme="dark">
+      <div class="stars"></div>
 
-              <div class="mobile-media mobile-media--work work-three work-three--mobile" aria-hidden="true">
-                <canvas class="work-three__canvas"></canvas>
-              </div>
+      <div class="section-inner code-inner">
+        <div class="section-heading reveal reveal--title">
+          <h2>Я плохгламмист</h2>
+          <p class="lead">А точнее вайбкодер. Спасибо миру за прошлую связку того, что я дизайнер, и создавать проекты данный факт мне не помешает)</p>
+        </div>
 
-              <nav class="discipline-list" aria-label="Disciplines">
-                <a href="projects.html" class="discipline" data-media="frontend">
-                  <span>01</span><strong>Frontend</strong><em>interfaces / web</em>
-                </a>
-                <button class="discipline" type="button" data-media="ai">
-                  <span>02</span><strong>AI systems</strong><em>agents / MCP</em>
-                </button>
-                <button class="discipline" type="button" data-media="design">
-                  <span>03</span><strong>Design</strong><em>visual systems</em>
-                </button>
-                <a href="music.html" class="discipline" data-media="music">
-                  <span>04</span><strong>Music</strong><em>sound / themes</em>
-                </a>
-              </nav>
-            </section>
+        <div class="code-columns">
+          <p class="body-copy body-copy--light reveal">Немного писанины перед тем, как показать вам прекрасные и замечательные сайты, которые я мастерил в разное время своей жизни и карьеры. Я начал программировать до того, как появился вайбкодинг, но тогда это были максимально простые сайты, которые я делал на коленке в учебных целях. У меня не было планов делать большие сайты и приложения — хотя в тот момент я уже мечтал об этом. При этом я могу ругаться на сайты, которые реально сделаны очень ужасно, дешево и, знаете, можно даже сказать нейрослопово. Я такого стараюсь не допустить, и слава богу, ахах.</p>
 
-            <section class="story-state story-state--contact" data-state="contact">
-              <h2 class="story-heading">Find me online</h2>
-
-              <figure class="mobile-media mobile-media--city" aria-hidden="true">
-                <img src="assets/khabarovsk.jpg" alt="" />
-              </figure>
-
-              <div class="find-links">
-                <a href="https://t.me/niktoimiya" target="_blank" rel="noreferrer">Telegram <span>↗</span></a>
-                <a href="https://github.com/niktoimiyazap" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-                <a href="mailto:obchannel3@gmail.com">Email <span>↗</span></a>
-                <a href="music.html">Music <span>→</span></a>
-              </div>
-            </section>
-          </div>
-
-          <p class="contact-signature" aria-hidden="true">@niktoimiya</p>
-
-          <div class="surface-index" aria-hidden="true">
-            <span class="surface-index__current">01</span>
-            <span class="surface-index__line"></span>
-            <span>03</span>
-          </div>
-
-          <div class="surface-hint" aria-hidden="true">
-            <span>scroll</span>
-            <i></i>
+          <div class="sites-block reveal">
+            <h3>Сайты:</h3>
+            <div class="site-grid">
+              <a class="site-card material-card" href="https://russiatoday.vercel.app/" target="_blank" rel="noreferrer">
+                <img class="site-card__image" src="assets/case1.jpg" alt="Russia Today" />
+                <span class="site-card__title">Russia Today</span>
+                <span class="site-card__arrow">↗</span>
+              </a>
+              <a class="site-card material-card" href="https://promptterra.vercel.app/" target="_blank" rel="noreferrer">
+                <img class="site-card__image" src="assets/promptterra.png" alt="PromptTerra" />
+                <span class="site-card__title">PromptTerra</span>
+                <span class="site-card__arrow">↗</span>
+              </a>
+              <a class="site-card material-card" href="https://t.me/copellarecorderbot" target="_blank" rel="noreferrer">
+                <img class="site-card__image" src="assets/recorder-logo-short-main.png" alt="Копелла Рекордер" />
+                <span class="site-card__title">Рекордер</span>
+                <span class="site-card__arrow">↗</span>
+              </a>
+              <a class="site-card material-card" href="https://vika-motion.vercel.app" target="_blank" rel="noreferrer">
+                <img class="site-card__image" src="assets/vikamotion.png" alt="Vika Motion" />
+                <span class="site-card__title">Vika Motion</span>
+                <span class="site-card__arrow">↗</span>
+              </a>
+              <a class="site-card material-card" href="https://forecast-ashy.vercel.app/" target="_blank" rel="noreferrer">
+                <img class="site-card__image" src="assets/forecast.png" alt="Forecast" />
+                <span class="site-card__title">Forecast</span>
+                <span class="site-card__arrow">↗</span>
+              </a>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.25/dist/lenis.min.js"></script>
-    <script src="vendor/three.min.js"></script>
-    <script>
-
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const finePointer = window.matchMedia("(pointer: fine)");
-
-const poses = {
-  frontend: { x: -0.16, y: 0.32, z: -0.08, scale: 1.08, speed: 0.18 },
-  ai:       { x:  0.40, y: 1.18, z:  0.16, scale: 1.02, speed: 0.28 },
-  design:   { x: -0.46, y: -0.52, z: 0.46, scale: 1.14, speed: 0.14 },
-  music:    { x:  0.18, y: 2.20, z: -0.40, scale: 1.05, speed: 0.34 }
-};
-
-let activePose = "frontend";
-let desktopActive = false;
-
-function makeOrbitCurve(radius, height, phase, lobes, depthScale = 1) {
-  const points = [];
-  const pointCount = 18;
-
-  for (let i = 0; i < pointCount; i += 1) {
-    const u = i / pointCount;
-    const angle = u * Math.PI * 2;
-    const radiusWave = 1 + Math.sin(angle * lobes + phase) * 0.105;
-    points.push(new THREE.Vector3(
-      Math.cos(angle) * radius * radiusWave,
-      Math.sin(angle * 2 + phase) * height + Math.cos(angle * 3 - phase) * 0.13,
-      Math.sin(angle) * radius * depthScale * radiusWave
-    ));
-  }
-
-  return new THREE.CatmullRomCurve3(points, true, "centripetal", 0.5);
-}
-
-function createScene(container) {
-  const canvas = container.querySelector(".work-three__canvas");
-  if (!canvas) return null;
-  const isMobileScene = container.classList.contains("work-three--mobile");
-
-  let renderer;
-  try {
-    renderer = new THREE.WebGLRenderer({
-      canvas,
-      antialias: true,
-      alpha: true,
-      powerPreference: "high-performance"
-    });
-  } catch (error) {
-    container.classList.add("is-fallback");
-    return null;
-  }
-
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, finePointer.matches ? 1.8 : 1.45));
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 0.98;
-  renderer.setClearColor(0x000000, 0);
-
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 40);
-  camera.position.set(0, 0.05, isMobileScene ? 6.65 : 6.05);
-
-  const sculpture = new THREE.Group();
-  sculpture.rotation.set(-0.2, 0.42, -0.08);
-  scene.add(sculpture);
-
-  const redMaterial = new THREE.MeshPhysicalMaterial({
-    color: 0xef4e36,
-    roughness: 0.36,
-    metalness: 0.04,
-    clearcoat: 0.28,
-    clearcoatRoughness: 0.55
-  });
-  const blueMaterial = new THREE.MeshPhysicalMaterial({
-    color: 0x315eeb,
-    roughness: 0.4,
-    metalness: 0.035,
-    clearcoat: 0.22,
-    clearcoatRoughness: 0.6
-  });
-  const pearlMaterial = new THREE.MeshPhysicalMaterial({
-    color: 0xf2efe7,
-    roughness: 0.5,
-    metalness: 0,
-    clearcoat: 0.12,
-    clearcoatRoughness: 0.74
-  });
-  const coreMaterial = new THREE.MeshPhysicalMaterial({
-    color: 0xf4f1e9,
-    roughness: 0.22,
-    metalness: 0,
-    transmission: 0.14,
-    thickness: 1.35,
-    ior: 1.3,
-    clearcoat: 0.3,
-    clearcoatRoughness: 0.48
-  });
-
-  const outerCurve = makeOrbitCurve(1.92, 0.6, 0.2, 3, 1.0);
-  const middleCurve = makeOrbitCurve(1.48, 0.88, 1.32, 2, 0.78);
-  const innerCurve = makeOrbitCurve(1.06, 0.46, 2.48, 4, 1.12);
-  const curves = [outerCurve, middleCurve, innerCurve];
-
-  const outerGeometry = new THREE.TubeGeometry(outerCurve, 320, 0.175, 20, true);
-  const middleGeometry = new THREE.TubeGeometry(middleCurve, 300, 0.115, 18, true);
-  const innerGeometry = new THREE.TubeGeometry(innerCurve, 260, 0.072, 16, true);
-
-  const outerLoop = new THREE.Mesh(outerGeometry, redMaterial);
-  const middleLoop = new THREE.Mesh(middleGeometry, blueMaterial);
-  const innerLoop = new THREE.Mesh(innerGeometry, pearlMaterial);
-  middleLoop.rotation.set(0.22, -0.16, 0.34);
-  innerLoop.rotation.set(-0.38, 0.28, -0.18);
-  sculpture.add(outerLoop, middleLoop, innerLoop);
-
-  const coreGeometry = new THREE.SphereGeometry(0.67, 64, 48);
-  const corePosition = coreGeometry.attributes.position;
-  const tempVertex = new THREE.Vector3();
-  for (let i = 0; i < corePosition.count; i += 1) {
-    tempVertex.fromBufferAttribute(corePosition, i);
-    const length = tempVertex.length();
-    if (!length) continue;
-    const nx = tempVertex.x / length;
-    const ny = tempVertex.y / length;
-    const nz = tempVertex.z / length;
-    const deformation = 1 +
-      Math.sin(nx * 6.2 + ny * 2.8) * 0.035 +
-      Math.cos(nz * 7.1 - ny * 3.4) * 0.026;
-    tempVertex.multiplyScalar(deformation);
-    corePosition.setXYZ(i, tempVertex.x, tempVertex.y, tempVertex.z);
-  }
-  coreGeometry.computeVertexNormals();
-  const core = new THREE.Mesh(coreGeometry, coreMaterial);
-  sculpture.add(core);
-
-  const nodeGeometry = new THREE.SphereGeometry(0.085, 28, 20);
-  const nodeMaterial = new THREE.MeshStandardMaterial({
-    color: 0xf5f2ea,
-    roughness: 0.42,
-    metalness: 0.02
-  });
-  const nodes = [];
-  for (let i = 0; i < 7; i += 1) {
-    const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
-    node.userData.curve = curves[i % curves.length];
-    node.userData.offset = (i / 7 + (i % 3) * 0.08) % 1;
-    node.userData.speed = 0.022 + i * 0.0035;
-    node.scale.setScalar(i % 2 ? 0.82 : 1.08);
-    node.userData.curve.getPointAt(node.userData.offset, node.position);
-    sculpture.add(node);
-    nodes.push(node);
-  }
-
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x17171d, 2.0));
-
-  const key = new THREE.DirectionalLight(0xfffcf4, 2.55);
-  key.position.set(4.8, 6.2, 7.6);
-  scene.add(key);
-
-  const fill = new THREE.DirectionalLight(0x9fb5ff, 1.25);
-  fill.position.set(-5.4, 2.2, 4.2);
-  scene.add(fill);
-
-  const rim = new THREE.DirectionalLight(0xff9c88, 1.05);
-  rim.position.set(-4.0, -2.5, -5.4);
-  scene.add(rim);
-
-  const softFront = new THREE.PointLight(0xffffff, 0.72, 18, 2);
-  softFront.position.set(0.8, -0.6, 5.8);
-  scene.add(softFront);
-
-  const pointer = { x: 0, y: 0 };
-  const pointerTarget = { x: 0, y: 0 };
-  const state = {
-    rotationX: poses.frontend.x,
-    rotationY: poses.frontend.y,
-    rotationZ: poses.frontend.z,
-    scale: poses.frontend.scale,
-    speed: poses.frontend.speed
-  };
-
-  function resize() {
-    const rect = container.getBoundingClientRect();
-    if (rect.width < 2 || rect.height < 2) return;
-    renderer.setSize(rect.width, rect.height, false);
-    camera.aspect = rect.width / rect.height;
-    camera.updateProjectionMatrix();
-  }
-
-  function onPointerMove(event) {
-    if (!finePointer.matches) return;
-    const rect = container.getBoundingClientRect();
-    pointerTarget.x = ((event.clientX - rect.left) / rect.width - 0.5) * 0.28;
-    pointerTarget.y = ((event.clientY - rect.top) / rect.height - 0.5) * 0.22;
-  }
-
-  function onPointerLeave() {
-    pointerTarget.x = 0;
-    pointerTarget.y = 0;
-  }
-
-  container.addEventListener("pointermove", onPointerMove, { passive: true });
-  container.addEventListener("pointerleave", onPointerLeave, { passive: true });
-
-  const resizeObserver = new ResizeObserver(resize);
-  resizeObserver.observe(container);
-  resize();
-
-  try {
-    renderer.compile(scene, camera);
-    renderer.render(scene, camera);
-    container.classList.add("is-ready");
-  } catch (error) {
-    container.classList.add("is-fallback");
-  }
-
-  const clock = new THREE.Clock();
-  let raf = 0;
-  let visible = true;
-
-  const visibilityObserver = new IntersectionObserver((entries) => {
-    visible = entries[0]?.isIntersecting ?? true;
-  }, { threshold: 0.01 });
-  visibilityObserver.observe(container);
-
-  function render() {
-    raf = requestAnimationFrame(render);
-    if (!visible || document.hidden) return;
-
-    const pose = poses[activePose] || poses.frontend;
-    const dt = Math.min(clock.getDelta(), 0.05);
-    const t = clock.elapsedTime;
-
-    pointer.x = THREE.MathUtils.damp(pointer.x, pointerTarget.x, 5.2, dt);
-    pointer.y = THREE.MathUtils.damp(pointer.y, pointerTarget.y, 5.2, dt);
-
-    state.rotationX = THREE.MathUtils.damp(state.rotationX, pose.x, 3.4, dt);
-    state.rotationY = THREE.MathUtils.damp(state.rotationY, pose.y, 3.4, dt);
-    state.rotationZ = THREE.MathUtils.damp(state.rotationZ, pose.z, 3.4, dt);
-    state.scale = THREE.MathUtils.damp(state.scale, pose.scale, 3.8, dt);
-    state.speed = THREE.MathUtils.damp(state.speed, pose.speed, 3.2, dt);
-
-    const motionScale = reducedMotion ? 0 : 1;
-    sculpture.rotation.x = state.rotationX + pointer.y * motionScale + Math.sin(t * 0.21) * 0.055 * motionScale;
-    sculpture.rotation.y = state.rotationY + pointer.x * motionScale + t * (0.055 + state.speed * 0.06) * motionScale;
-    sculpture.rotation.z = state.rotationZ + Math.sin(t * 0.34) * 0.045 * motionScale;
-    sculpture.scale.setScalar(state.scale);
-
-    outerLoop.rotation.z = Math.sin(t * 0.32) * 0.12 * motionScale;
-    middleLoop.rotation.x = 0.22 + Math.sin(t * 0.27 + 0.8) * 0.12 * motionScale;
-    middleLoop.rotation.y = -0.16 + t * 0.035 * motionScale;
-    innerLoop.rotation.z = -0.18 - t * 0.048 * motionScale;
-    innerLoop.rotation.x = -0.38 + Math.cos(t * 0.31) * 0.08 * motionScale;
-
-    const corePulse = 1 + Math.sin(t * 0.78) * 0.035 * motionScale;
-    core.scale.setScalar(corePulse);
-    core.rotation.y = t * 0.14 * motionScale;
-    core.rotation.x = Math.sin(t * 0.24) * 0.16 * motionScale;
-
-    nodes.forEach((node) => {
-      const u = (node.userData.offset + t * node.userData.speed * motionScale) % 1;
-      node.userData.curve.getPointAt(u, node.position);
-    });
-
-    renderer.render(scene, camera);
-    container.classList.add("is-ready");
-  }
-
-  render();
-
-  return {
-    destroy() {
-      cancelAnimationFrame(raf);
-      resizeObserver.disconnect();
-      visibilityObserver.disconnect();
-      renderer.dispose();
-      outerGeometry.dispose();
-      middleGeometry.dispose();
-      innerGeometry.dispose();
-      coreGeometry.dispose();
-      nodeGeometry.dispose();
-      redMaterial.dispose();
-      blueMaterial.dispose();
-      pearlMaterial.dispose();
-      coreMaterial.dispose();
-      nodeMaterial.dispose();
-    }
-  };
-}
-
-const scenes = [];
-const mobileSceneQuery = window.matchMedia("(max-width: 760px)");
-document.querySelectorAll(".work-three").forEach((container) => {
-  const isDesktopScene = container.classList.contains("work-three--desktop");
-  if (isDesktopScene === mobileSceneQuery.matches) return;
-  const scene = createScene(container);
-  if (scene) scenes.push(scene);
-});
-
-window.addEventListener("work-three-pose", (event) => {
-  const next = event.detail?.pose;
-  if (poses[next]) activePose = next;
-});
-
-window.addEventListener("work-three-active", (event) => {
-  desktopActive = Boolean(event.detail?.active);
-  document.documentElement.toggleAttribute("data-work-three-active", desktopActive);
-});
-
-window.addEventListener("pagehide", () => {
-  scenes.forEach((scene) => scene.destroy());
-}, { once: true });
-
-</script>
-    <script>
-      (function () {
-        var root = document.documentElement;
-        var body = document.body;
-        var toggle = document.querySelector(".theme-toggle");
-        var loader = document.querySelector(".ascii-loader");
-        var loaderIndicator = document.querySelector(".ascii-loader__indicator");
-        var storageKey = "niktoimiya-theme";
-        var savedTheme = localStorage.getItem(storageKey);
-        var hour = new Date().getHours();
-        var autoTheme = hour >= 7 && hour < 19 ? "light" : "dark";
-        var initialTheme = savedTheme || autoTheme;
-        var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        var desktopQuery = window.matchMedia("(min-width: 761px)");
-        var finePointer = window.matchMedia("(pointer: fine)");
-        var sceneStarted = false;
-
-        root.setAttribute("data-theme", initialTheme);
-
-        if (toggle) {
-          toggle.addEventListener("click", function () {
-            var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
-            var next = current === "dark" ? "light" : "dark";
-            root.setAttribute("data-theme", next);
-            localStorage.setItem(storageKey, next);
-          });
-        }
-
-        function setupStaticFallback() {
-          body.classList.add("frame-static");
-        }
-
-        function setupScene() {
-          if (sceneStarted) return;
-          sceneStarted = true;
-
-          if (reducedMotion || !desktopQuery.matches || !window.gsap || !window.ScrollTrigger) {
-            if (reducedMotion || (desktopQuery.matches && (!window.gsap || !window.ScrollTrigger))) {
-              setupStaticFallback();
-            }
-            return;
-          }
-
-          gsap.registerPlugin(ScrollTrigger);
-          if (window.SplitText) gsap.registerPlugin(SplitText);
-
-          var title = document.querySelector(".identity-title");
-          var mediaFrame = document.querySelector(".media-frame");
-          var mediaInner = document.querySelector(".media-frame__inner");
-          var mediaDecor = document.querySelector(".media-decor");
-          var decorFlat = document.querySelector(".media-decor__flat");
-          var decorOutline = document.querySelector(".media-decor__outline");
-          var decorOrb = document.querySelector(".media-decor__orb");
-          var decorChip = document.querySelector(".media-decor__chip");
-          var portrait = document.querySelector(".media-image--portrait");
-          var work = document.querySelector(".work-three--desktop");
-          var workCanvas = work ? work.querySelector(".work-three__canvas") : null;
-          var softwareLayer = document.querySelector(".work-hover-layer--software");
-          var designLayer = document.querySelector(".work-hover-layer--design");
-          var city = document.querySelector(".media-image--city");
-          var identityState = document.querySelector(".story-state--identity");
-          var workState = document.querySelector(".story-state--work");
-          var contactState = document.querySelector(".story-state--contact");
-          var signature = document.querySelector(".contact-signature");
-          var index = document.querySelector(".surface-index__current");
-          var hint = document.querySelector(".surface-hint");
-          var activeState = "identity";
-
-          var hoverDecor = {
-            frontend: { flatX: 0, flatY: 0, outlineX: 0, outlineY: 0, rotate: 0, orbX: 0, orbY: 0, chipX: 0, chipY: 0, chipScale: 1 },
-            ai: { flatX: 20, flatY: -8, outlineX: -10, outlineY: 8, rotate: -2.5, orbX: -42, orbY: 30, chipX: 24, chipY: 6, chipScale: 0.8 },
-            design: { flatX: -16, flatY: 15, outlineX: 12, outlineY: -8, rotate: 2.2, orbX: 34, orbY: -24, chipX: -18, chipY: 18, chipScale: 1.16 },
-            music: { flatX: 28, flatY: 18, outlineX: -6, outlineY: -14, rotate: -1.8, orbX: -20, orbY: -34, chipX: 38, chipY: -10, chipScale: 0.7 }
-          };
-
-          function setDecorPose(pose) {
-            mediaDecor.style.setProperty("--flat-x", pose.flatX + "px");
-            mediaDecor.style.setProperty("--flat-y", pose.flatY + "px");
-            mediaDecor.style.setProperty("--outline-x", pose.outlineX + "px");
-            mediaDecor.style.setProperty("--outline-y", pose.outlineY + "px");
-            mediaDecor.style.setProperty("--outline-rotate", pose.rotate + "deg");
-            mediaDecor.style.setProperty("--orb-x", pose.orbX + "px");
-            mediaDecor.style.setProperty("--orb-y", pose.orbY + "px");
-            mediaDecor.style.setProperty("--chip-x", pose.chipX + "px");
-            mediaDecor.style.setProperty("--chip-y", pose.chipY + "px");
-            mediaDecor.style.setProperty("--chip-scale", pose.chipScale);
-          }
-
-          function moveDecorForHover(name) {
-            setDecorPose(hoverDecor[name] || hoverDecor.frontend);
-          }
-
-          function resetDecorHover() {
-            setDecorPose(hoverDecor.frontend);
-          }
-
-          function markState(name) {
-            if (activeState === name) return;
-            activeState = name;
-            [identityState, workState, contactState].forEach(function (state) {
-              state.classList.toggle("is-active", state.getAttribute("data-state") === name);
-            });
-            index.textContent = name === "identity" ? "01" : name === "work" ? "02" : "03";
-            root.toggleAttribute("data-work-three-active", name === "work");
-            window.dispatchEvent(new CustomEvent("work-three-active", { detail: { active: name === "work" } }));
-            if (name !== "work") hideHoverMedia();
-          }
-
-          function hideWorkLayers(except) {
-            if (softwareLayer && except !== "software") {
-              var softwareItems = softwareLayer.querySelectorAll(".software-cloud__item");
-              gsap.to(softwareLayer, { autoAlpha: 0, filter: "blur(8px)", duration: 0.5, ease: "power2.out", overwrite: true });
-              gsap.to(softwareItems, { opacity: 0, filter: "blur(5px)", duration: 0.38, stagger: 0.02, ease: "power2.out", overwrite: true });
-            }
-            if (designLayer && except !== "design") {
-              gsap.to(designLayer, { autoAlpha: 0, x: -24, scale: 0.97, duration: 0.38, ease: "power2.out", overwrite: true });
-            }
-          }
-
-          function showHoverMedia(name) {
-            if (!hoverDecor[name] || activeState !== "work" || !finePointer.matches) return;
-            gsap.to(mediaInner, { scale: 1.012, duration: 0.38, ease: "power2.out", overwrite: true });
-            moveDecorForHover(name);
-
-            if (name === "ai") {
-              if (workCanvas) gsap.to(workCanvas, { opacity: 0, duration: 0.52, ease: "power2.inOut", overwrite: true });
-              hideWorkLayers("software");
-              if (softwareLayer) {
-                var softwareItems = softwareLayer.querySelectorAll(".software-cloud__item");
-                gsap.killTweensOf([softwareLayer, softwareItems]);
-                gsap.fromTo(softwareLayer,
-                  { autoAlpha: 0, filter: "blur(12px)" },
-                  { autoAlpha: 1, filter: "blur(0px)", duration: 0.78, ease: "power2.out", overwrite: true }
-                );
-                gsap.fromTo(softwareItems,
-                  { opacity: 0, filter: "blur(7px)" },
-                  { opacity: 1, filter: "blur(0px)", duration: 0.62, stagger: 0.055, ease: "power2.out", overwrite: true, delay: 0.12 }
-                );
-              }
-              return;
-            }
-
-            if (name === "design") {
-              if (workCanvas) gsap.to(workCanvas, { opacity: 0, duration: 0.28, ease: "power2.out", overwrite: true });
-              hideWorkLayers("design");
-              if (designLayer) {
-                gsap.fromTo(designLayer,
-                  { autoAlpha: 0, x: -48, scale: 0.94 },
-                  { autoAlpha: 1, x: 0, scale: 1, duration: 0.48, ease: "power3.out", overwrite: true }
-                );
-              }
-              return;
-            }
-
-            hideWorkLayers();
-            if (workCanvas) gsap.to(workCanvas, { opacity: 1, duration: 0.32, ease: "power2.out", overwrite: true });
-            window.dispatchEvent(new CustomEvent("work-three-pose", { detail: { pose: name } }));
-          }
-
-          function hideHoverMedia() {
-            gsap.to(mediaInner, { scale: 1, duration: 0.36, ease: "power2.out", overwrite: true });
-            resetDecorHover();
-            hideWorkLayers();
-            if (workCanvas) gsap.to(workCanvas, { opacity: 1, duration: 0.34, ease: "power2.out", overwrite: true });
-            window.dispatchEvent(new CustomEvent("work-three-pose", { detail: { pose: "frontend" } }));
-          }
-
-          document.querySelectorAll("[data-media]").forEach(function (item) {
-            item.addEventListener("pointerenter", function () {
-              showHoverMedia(item.getAttribute("data-media"));
-            });
-            item.addEventListener("pointerleave", hideHoverMedia);
-            item.addEventListener("focus", function () {
-              showHoverMedia(item.getAttribute("data-media"));
-            });
-            item.addEventListener("blur", hideHoverMedia);
-          });
-
-          var lenis = null;
-          if (window.Lenis && finePointer.matches && window.innerWidth >= 1100) {
-            lenis = new Lenis({
-              autoRaf: true,
-              lerp: 0.1,
-              smoothWheel: true,
-              wheelMultiplier: 0.9
-            });
-            lenis.on("scroll", ScrollTrigger.update);
-          }
-
-          if (window.SplitText) {
-            var titleSplit = SplitText.create(title, { type: "lines", mask: "lines" });
-            var leadSplit = SplitText.create(".story-state--identity .js-reveal-lines", { type: "lines", mask: "lines" });
-            gsap.timeline({
-              defaults: { ease: "power3.out" },
-              onComplete: function () {
-                titleSplit.revert();
-                leadSplit.revert();
-              }
-            })
-              .from(titleSplit.lines, { yPercent: 110, duration: 0.72 })
-              .from(mediaFrame, { opacity: 0, scale: 0.97, duration: 0.82 }, 0.08)
-              .from(leadSplit.lines, { yPercent: 110, duration: 0.62, stagger: 0.06 }, 0.2)
-              .from(".story-meta > div", { opacity: 0, y: 12, duration: 0.46, stagger: 0.05 }, 0.34);
-          } else {
-            gsap.from(mediaFrame, { opacity: 0, scale: 0.97, duration: 0.8, ease: "power3.out" });
-          }
-
-          var tl = gsap.timeline({
-            defaults: { ease: "none" },
-            scrollTrigger: {
-              trigger: ".one-frame",
-              start: "top top",
-              end: "+=4200",
-              pin: ".one-frame__pin",
-              scrub: 0.9,
-              anticipatePin: 1,
-              invalidateOnRefresh: true,
-              onUpdate: function (self) {
-                if (self.progress < 0.34) markState("identity");
-                else if (self.progress < 0.78) markState("work");
-                else markState("contact");
-              }
-            }
-          });
-
-          tl.addLabel("identity", 0)
-            .to(hint, { opacity: 0, y: 8, duration: 0.12 }, 0.04)
-            .addLabel("toWork", 0.72)
-            .to(identityState, { opacity: 0, y: -16, duration: 0.28 }, "toWork")
-            .to(title, {
-              scale: 0.62,
-              y: -18,
-              transformOrigin: "left top",
-              duration: 0.68,
-              ease: "power2.inOut"
-            }, "toWork")
-            .to(mediaFrame, {
-              opacity: 0,
-              scale: 0.96,
-              duration: 0.56,
-              ease: "power2.inOut"
-            }, "toWork+=0.02")
-            .to(decorFlat, {
-              left: "1.4vw", top: "57vh", width: "47vw", height: "23vh",
-              backgroundColor: "#ef4e36", borderRadius: "28px 76px 28px 54px",
-              duration: 0.72, ease: "power2.inOut"
-            }, "toWork")
-            .to(decorOutline, {
-              left: "3.5vw", top: "30vh", width: "49vw", height: "52vh",
-              borderColor: "rgba(239, 78, 54, 0.62)", duration: 0.72, ease: "power2.inOut"
-            }, "toWork")
-            .to(decorOrb, {
-              left: "46.5vw", top: "61vh", borderColor: "#ef4e36",
-              duration: 0.72, ease: "power2.inOut"
-            }, "toWork")
-            .to(decorChip, {
-              left: "8vw", top: "30vh", width: "118px", backgroundColor: "#ef4e36",
-              duration: 0.72, ease: "power2.inOut"
-            }, "toWork")
-            .to(portrait, { opacity: 0, scale: 1.035, duration: 0.58, ease: "power2.inOut" }, "toWork+=0.02")
-            .fromTo(work,
-              { opacity: 0, x: -160, scale: 0.84, filter: "blur(10px)" },
-              { opacity: 1, x: 0, scale: 1, filter: "blur(0px)", duration: 0.86, ease: "power3.out" },
-              "toWork-=0.02"
-            )
-            .fromTo(workState, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.44 }, "toWork+=0.22")
-            .addLabel("work", 1.38)
-            .addLabel("toContact", 2.28)
-            .to(workState, { opacity: 0, y: -16, duration: 0.28 }, "toContact")
-            .to(title, {
-              scale: 0.48,
-              y: -18,
-              opacity: 0,
-              filter: "blur(18px)",
-              duration: 0.72,
-              ease: "power2.inOut"
-            }, "toContact")
-            .to(mediaFrame, {
-              width: function () { return window.innerWidth < 1100 ? "52vw" : "55vw"; },
-              height: function () { return window.innerWidth < 1100 ? "50vh" : "52vh"; },
-              top: function () { return window.innerWidth < 1100 ? "29vh" : "27vh"; },
-              borderRadius: "28px 72px 30px 48px",
-              scale: 1,
-              duration: 0.72,
-              ease: "power2.inOut"
-            }, "toContact")
-            .to(decorFlat, {
-              left: "1.5vw", top: "66vh", width: "15vw", height: "13vh",
-              backgroundColor: "#aac4d8", borderRadius: "28px 60px 28px 42px",
-              duration: 0.72, ease: "power2.inOut"
-            }, "toContact")
-            .to(decorOutline, {
-              left: "11vw", top: "25vh", width: "36vw", height: "46vh",
-              borderColor: "rgba(170, 196, 216, 0.34)", borderRadius: "44% 56% 48% 52% / 52% 42% 58% 48%",
-              duration: 0.72, ease: "power2.inOut"
-            }, "toContact")
-            .to(decorOrb, {
-              opacity: 0,
-              duration: 0.46, ease: "power2.inOut"
-            }, "toContact+=0.06")
-            .to(decorChip, {
-              opacity: 0,
-              duration: 0.42, ease: "power2.inOut"
-            }, "toContact+=0.06")
-            .to(work, { opacity: 0, x: -90, scale: 0.92, filter: "blur(9px)", duration: 0.62, ease: "power2.inOut" }, "toContact-=0.02")
-            .to(mediaFrame, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, "toContact+=0.06")
-            .to(city, { opacity: 1, scale: 1, duration: 0.5 }, "toContact+=0.08")
-            .to(".surface-index", { opacity: 0, duration: 0.24 }, "toContact+=0.12")
-            .fromTo(contactState, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.38 }, "toContact+=0.24")
-            .fromTo(signature, { opacity: 0, y: 12 }, { opacity: 0.72, y: 0, duration: 0.42 }, "toContact+=0.34")
-            .addLabel("contact", 2.96);
-
-          ScrollTrigger.addEventListener("refresh", function () {
-            if (lenis && typeof lenis.resize === "function") lenis.resize();
-          });
-          ScrollTrigger.refresh();
-        }
-
-        function finishIntro() {
-          if (loader) loader.classList.add("ascii-loader--done");
-          body.classList.remove("home-loading");
-          body.classList.add("home-ready");
-          window.requestAnimationFrame(setupScene);
-        }
-
-        if (loaderIndicator) {
-          var frames = ["[=---]", "[-=--]", "[--=-]", "[---=]"];
-          var frameIndex = 0;
-          var frameTimer = window.setInterval(function () {
-            frameIndex = (frameIndex + 1) % frames.length;
-            loaderIndicator.textContent = frames[frameIndex];
-          }, 110);
-
-          window.addEventListener("load", function () {
-            window.clearInterval(frameTimer);
-            window.setTimeout(finishIntro, 260);
-          }, { once: true });
-        } else {
-          finishIntro();
-        }
-      })();
-    </script>
-  </body>
+      </div>
+    </section>
+
+    <section id="skills" class="section-shell skills-section" data-section="skills" data-header-theme="light">
+      <div class="skills-inner">
+        <h2 class="reveal reveal--title">Мои навыки</h2>
+
+        <div class="skill-cloud skills-drop reveal" aria-label="Основные навыки">
+          <span class="skill skill--html">HTML/CSS</span>
+          <span class="skill skill--ui">UI/UX Design</span>
+          <span class="skill skill--music">Music Production</span>
+          <span class="skill skill--js">JavaScript</span>
+          <span class="skill skill--python">Python</span>
+          <span class="skill skill--node">Node.js</span>
+        </div>
+
+        <div class="terminal-card material-card reveal">
+          <p>python, nodejs, HTML5, javascript, design<br />web-design</p>
+          <p>:music<br />genres electronic, news, dramatic, countdown, ambient</p>
+        </div>
+
+        <footer class="footer reveal">
+          <a href="https://t.me/niktoimiya" target="_blank" rel="noreferrer">Telegram ↗</a>
+          <a href="https://github.com/niktoimiyazap" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <span>Хабаровск / 2026</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script src="scripts/animations.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
 </html>

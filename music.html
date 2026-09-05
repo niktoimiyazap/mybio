@@ -1,49 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>niktoimiya music</title>
+    <title>Музыка — niktoimiya</title>
     <meta
       name="description"
-      content="Placeholder music page for Vladislav aka @niktoimiya."
+      content="Музыкальное портфолио Владислава — @niktoimiya."
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="rebrand.css" />
+    <link rel="stylesheet" href="styles/music-modern.css" />
   </head>
   <body>
     <main class="page">
       <div class="themebar themebar--split">
-        <a class="theme-link" href="index.html" aria-label="Back to bio">
-          <span class="link-morph">
-            <span class="link-morph__base">&lt;- back</span>
-            <span class="link-morph__alt" aria-hidden="true">&lt;- back</span>
-          </span>
-        </a>
-        <button class="theme-toggle" type="button" aria-label="Toggle theme">
-          <span class="theme-toggle__label">theme</span>
-          <span class="theme-toggle__track" aria-hidden="true">
-            <span class="theme-toggle__thumb"></span>
-          </span>
-        </button>
+        <a class="theme-link" href="index.html" aria-label="Вернуться на главную">← назад</a>
+        <a class="music-brand" href="index.html">@niktoimiya</a>
       </div>
 
       <section class="layout layout--single">
         <div class="layout__main">
           <section class="hero hero--section-page">
             <div class="hero__content hero__content--section">
-              <h1 class="hero__title hero__title--section">Music</h1>
+              <h1 class="hero__title hero__title--section">Музыка</h1>
               <div class="music-hero__body">
                 <p class="hero__lead hero__lead--section">
-                  recent uploads, loops, themes, ids, and sketches from today.
+                  Треки, темы, эмбиент, новостная музыка и всё, что я успел собрать за это время.
                 </p>
                 <a
-                  href="https://t.me/licnolifem"
+                  href="https://t.me/niktoimiyamusic"
                   class="badge-link badge-link--section"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span class="badge-link__label">music portfolio channel ↗</span>
+                  <span class="badge-link__label">канал с музыкой ↗</span>
                 </a>
               </div>
             </div>
@@ -51,19 +40,103 @@
 
           <div class="track-toolbar">
             <p class="track-note">
-              real dates may vary depending on the release.
+              Архив работ — от ранних набросков до более свежих треков.
             </p>
             <details class="track-filters">
-              <summary class="track-filters__summary">filters</summary>
+              <summary class="track-filters__summary">фильтры</summary>
               <div class="track-filters__menu">
-                <button class="track-filters__option" type="button" data-filter="all">all</button>
-                <button class="track-filters__option" type="button" data-filter="dated">dated only</button>
-                <button class="track-filters__option" type="button" data-filter="undated">date not parsed</button>
+                <button class="track-filters__option" type="button" data-filter="all">все</button>
+                <button class="track-filters__option" type="button" data-filter="dated">с датой</button>
+                <button class="track-filters__option" type="button" data-filter="undated">без даты</button>
               </div>
             </details>
           </div>
 
           <section class="track-groups">
+            <section class="track-group" data-filter-group="dated">
+              <h2 class="track-group__date">31 august 2026</h2>
+              <div class="tracks">
+                <article class="track">
+                  <div class="track__meta">
+                    <p class="track__index">33</p>
+                    <h3 class="track__title">Гарний час</h3>
+                  </div>
+                  <div class="track__player">
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
+                    <div class="track__controls">
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
+                      <div class="track__time"><span class="track__current">0:00</span><span class="track__duration">0:00</span></div>
+                    </div>
+                    <audio preload="none" class="track__audio" data-audio-ready="false"><source data-src="assets/music/%D0%93%D0%B0%D1%80%D0%BD%D0%B8%D0%B9%20%D1%87%D0%B0%D1%81.mp3" type="audio/mpeg" /></audio>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="track-group" data-filter-group="dated">
+              <h2 class="track-group__date">15 august 2026</h2>
+              <div class="tracks">
+                <article class="track">
+                  <div class="track__meta"><p class="track__index">32</p><h3 class="track__title">Doesn't matter Club Remix</h3></div>
+                  <div class="track__player">
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
+                    <div class="track__controls"><input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" /><div class="track__time"><span class="track__current">0:00</span><span class="track__duration">0:00</span></div></div>
+                    <audio preload="none" class="track__audio" data-audio-ready="false"><source data-src="assets/music/Doesn%27t%20matter%20Club%20Remix.mp3" type="audio/mpeg" /></audio>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="track-group" data-filter-group="dated">
+              <h2 class="track-group__date">27 july 2026</h2>
+              <div class="tracks">
+                <article class="track">
+                  <div class="track__meta"><p class="track__index">31</p><h3 class="track__title">Презентация Копеллы. Аутро</h3></div>
+                  <div class="track__player">
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
+                    <div class="track__controls"><input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" /><div class="track__time"><span class="track__current">0:00</span><span class="track__duration">0:00</span></div></div>
+                    <audio preload="none" class="track__audio" data-audio-ready="false"><source data-src="assets/music/CP_topic.mp3" type="audio/mpeg" /></audio>
+                  </div>
+                </article>
+                <article class="track">
+                  <div class="track__meta"><p class="track__index">30</p><h3 class="track__title">Emotional everyday life</h3></div>
+                  <div class="track__player">
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
+                    <div class="track__controls"><input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" /><div class="track__time"><span class="track__current">0:00</span><span class="track__duration">0:00</span></div></div>
+                    <audio preload="none" class="track__audio" data-audio-ready="false"><source data-src="assets/music/Emotional%20everyday%20life.mp3" type="audio/mpeg" /></audio>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="track-group" data-filter-group="dated">
+              <h2 class="track-group__date">18 june 2026</h2>
+              <div class="tracks">
+                <article class="track">
+                  <div class="track__meta"><p class="track__index">29</p><h3 class="track__title">High in the mountains</h3></div>
+                  <div class="track__player">
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
+                    <div class="track__controls"><input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" /><div class="track__time"><span class="track__current">0:00</span><span class="track__duration">0:00</span></div></div>
+                    <audio preload="none" class="track__audio" data-audio-ready="false"><source data-src="assets/music/High%20in%20the%20mountains.mp3" type="audio/mpeg" /></audio>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="track-group" data-filter-group="dated">
+              <h2 class="track-group__date">5 june 2026</h2>
+              <div class="tracks">
+                <article class="track">
+                  <div class="track__meta"><p class="track__index">28</p><h3 class="track__title">Let's The Competition Begin!</h3></div>
+                  <div class="track__player">
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
+                    <div class="track__controls"><input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" /><div class="track__time"><span class="track__current">0:00</span><span class="track__duration">0:00</span></div></div>
+                    <audio preload="none" class="track__audio" data-audio-ready="false"><source data-src="assets/music/Let%27s%20The%20Competition%20Begin%21.mp3" type="audio/mpeg" /></audio>
+                  </div>
+                </article>
+              </div>
+            </section>
+
             <section class="track-group" data-filter-group="dated">
               <h2 class="track-group__date">3 december 2025</h2>
               <div class="tracks">
@@ -73,9 +146,9 @@
                     <h3 class="track__title">Under this tree</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -93,9 +166,9 @@
                     <h3 class="track__title">Like in space</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -118,9 +191,9 @@
                     <h3 class="track__title">By the glass</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -143,9 +216,9 @@
                     <h3 class="track__title">Unforgettable</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -168,9 +241,9 @@
                     <h3 class="track__title">NWS2410_SHPIGEL</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -193,9 +266,9 @@
                     <h3 class="track__title">The Forest of Secrets Full</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -218,9 +291,9 @@
                     <h3 class="track__title">DENNWS_SHPIGEL_upd_2_280824</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -243,9 +316,9 @@
                     <h3 class="track__title">Doesn't matter</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -268,9 +341,9 @@
                     <h3 class="track__title">You won't leave</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -293,9 +366,9 @@
                     <h3 class="track__title">ZETA_SHPIGEL_UPD070125</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -318,9 +391,9 @@
                     <h3 class="track__title">ZETA_EXIT_UPD080125</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -343,9 +416,9 @@
                     <h3 class="track__title">The Luminary Of Lights</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -360,7 +433,7 @@
             </section>
 
             <section class="track-group" data-filter-group="undated">
-              <h2 class="track-group__date">date not parsed yet</h2>
+              <h2 class="track-group__date">без даты</h2>
               <div class="tracks">
                 <article class="track">
                   <div class="track__meta">
@@ -368,9 +441,9 @@
                     <h3 class="track__title">The Forgotten One</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -388,9 +461,9 @@
                     <h3 class="track__title">New tree of life</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -408,9 +481,9 @@
                     <h3 class="track__title">Golden Tree</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -428,9 +501,9 @@
                     <h3 class="track__title">PODROBNOSTI-NEDELI_SHPIGEL_UPD211124</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -448,9 +521,9 @@
                     <h3 class="track__title">shp_news_oblako_v3</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -468,9 +541,9 @@
                     <h3 class="track__title">Fight 1</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -488,9 +561,9 @@
                     <h3 class="track__title">nws_shp_oblako_1</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -508,9 +581,9 @@
                     <h3 class="track__title">strilex_fill_2404</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -528,9 +601,9 @@
                     <h3 class="track__title">какая то атмофсфера</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -548,9 +621,9 @@
                     <h3 class="track__title">mestnoe_time_oblako_2405</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -568,9 +641,9 @@
                     <h3 class="track__title">заказ6_170724</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -588,9 +661,9 @@
                     <h3 class="track__title">безразмерка_заказ2_100624</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -608,9 +681,9 @@
                     <h3 class="track__title">morning_oblako_2404</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -628,9 +701,9 @@
                     <h3 class="track__title">Days of Hope</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -648,9 +721,9 @@
                     <h3 class="track__title">Bye Cosmically (1)</h3>
                   </div>
                   <div class="track__player">
-                    <button class="track__play" type="button">play</button>
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
                     <div class="track__controls">
-                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Seek track" />
+                      <input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" />
                       <div class="track__time">
                         <span class="track__current">0:00</span>
                         <span class="track__duration">0:00</span>
@@ -669,25 +742,6 @@
     </main>
     <script>
       (function () {
-        var root = document.documentElement;
-        var toggle = document.querySelector(".theme-toggle");
-        var storageKey = "niktoimiya-theme";
-        var savedTheme = localStorage.getItem(storageKey);
-        var hour = new Date().getHours();
-        var autoTheme = hour >= 7 && hour < 19 ? "light" : "dark";
-        var initialTheme = savedTheme || autoTheme;
-
-        root.setAttribute("data-theme", initialTheme);
-
-        if (toggle) {
-          toggle.addEventListener("click", function () {
-            var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
-            var next = current === "dark" ? "light" : "dark";
-            root.setAttribute("data-theme", next);
-            localStorage.setItem(storageKey, next);
-          });
-        }
-
         var trackGroupsContainer = document.querySelector(".track-groups");
         var filterDetails = document.querySelector(".track-filters");
         var filterButtons = Array.from(document.querySelectorAll(".track-filters__option"));
@@ -713,18 +767,18 @@
           december: 11
         };
         var monthLabels = [
-          "january",
-          "february",
-          "march",
-          "april",
-          "may",
-          "june",
-          "july",
-          "august",
-          "september",
-          "october",
-          "november",
-          "december"
+          "января",
+          "февраля",
+          "марта",
+          "апреля",
+          "мая",
+          "июня",
+          "июля",
+          "августа",
+          "сентября",
+          "октября",
+          "ноября",
+          "декабря"
         ];
         var implicitDayMonthYear = 2024;
 
@@ -898,7 +952,7 @@
                 existingExplicitGroup.tracks = existingExplicitGroup.tracks.concat(tracksInGroup);
               } else {
                 datedGroups.set(explicitKey, {
-                  dateLabel: dateHeading ? dateHeading.textContent.trim() : "date not parsed yet",
+                  dateLabel: formatDateLabel(explicitTimestamp),
                   timestamp: explicitTimestamp,
                   tracks: tracksInGroup.slice()
                 });
@@ -948,7 +1002,7 @@
           });
 
           if (undatedTracks.length > 0) {
-            var undatedGroup = createTrackGroup("undated", "date not parsed yet");
+            var undatedGroup = createTrackGroup("undated", "без даты");
             var undatedGrid = undatedGroup.querySelector(".tracks");
 
             undatedTracks.forEach(function (track) {
@@ -1055,7 +1109,7 @@
               }
 
               function handleError() {
-                setTrackAudioState("error", "[error]");
+                setTrackAudioState("error", "ошибка");
                 finish(false);
               }
 
@@ -1109,14 +1163,14 @@
 
           audio.addEventListener("play", function () {
             activeAudio = audio;
-            playButton.textContent = "pause";
+            playButton.setAttribute("aria-label", "Поставить трек на паузу");
             track.setAttribute("data-state", "playing");
             renderTrackTime();
           });
 
           audio.addEventListener("pause", function () {
             if (activeAudio === audio) activeAudio = null;
-            playButton.textContent = "play";
+            playButton.setAttribute("aria-label", "Воспроизвести трек");
             track.removeAttribute("data-state");
             renderTrackTime();
           });
