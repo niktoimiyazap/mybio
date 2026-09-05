@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://niktoimiyazap.github.io/mybio/sitemap.xml
