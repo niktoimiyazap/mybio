@@ -3,6 +3,18 @@
   const topbar = document.querySelector('.topbar');
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#site-nav');
+  const ageElement = document.querySelector('[data-age][data-birth-date]');
+
+  if (ageElement) {
+    const birthDate = new Date(`${ageElement.dataset.birthDate}T00:00:00`);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const birthdayPassed =
+      today.getMonth() > birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+    if (!birthdayPassed) age -= 1;
+    ageElement.textContent = `${age} y.o`;
+  }
 
   const closeMenu = () => {
     if (!topbar || !menuToggle) return;
