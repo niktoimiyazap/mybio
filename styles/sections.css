@@ -10,3 +10,5 @@
 [data-skill-safe-zone] p{font-family:"SFMono-Regular",Consolas,monospace;font-size:clamp(18px,1.55vw,28px);line-height:1.5;color:rgba(25,18,40,.78);text-shadow:none!important}
 [data-skill-safe-zone] p+p{margin-top:26px}
 @media(max-width:620px){[data-skill-physics]{height:500px!important;margin-bottom:24px!important}[data-skill-physics] .skill{font-size:clamp(22px,7.8vw,38px)!important}[data-skill-physics] .skill:nth-child(3n+1){font-size:clamp(26px,9vw,44px)!important}[data-skill-physics] .skill:nth-child(4n+2){font-size:clamp(20px,6.7vw,34px)!important}[data-skill-safe-zone]{width:100%!important;padding:0!important}[data-skill-safe-zone] p{font-size:15px}}
+/* Keep native vertical scrolling available over the physics words on touchscreens. */
+[data-skill-physics], [data-skill-physics] .skill { touch-action: pan-y pinch-zoom; }
