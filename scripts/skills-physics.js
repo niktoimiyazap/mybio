@@ -16,6 +16,10 @@
   let pointerOffset = { x: 0, y: 0 };
   let pointerHistory = [];
   let dragConstraint = null;
+  let visible = false;
+  let pageActive = !document.hidden;
+  let lastFrame = 0;
+  let stageWidth = 0;
 
   const sync = () => {
     bodies.forEach(({ body, element }) => {
@@ -23,10 +27,29 @@
     });
   };
 
-  const tick = () => {
-    Engine.update(engine, 1000 / 60);
-    sync();
+  const tick = (time) => {
+    if (!visible || !pageActive || reduceMotion) {
+      raf = 0;
+      return;
+    }
+    // Limit the simulation to one step per frame; avoid catch-up spikes on mobile.
+    if (time - lastFrame >= 15) {
+      Engine.update(engine, 1000 / 60);
+      sync();
+      lastFrame = time;
+    }
     raf = requestAnimationFrame(tick);
+  };
+
+  const resume = () => {
+    if (!started || !visible || !pageActive || reduceMotion || raf) return;
+    lastFrame = 0;
+    raf = requestAnimationFrame(tick);
+  };
+
+  const pause = () => {
+    cancelAnimationFrame(raf);
+    raf = 0;
   };
 
   const makeWalls = () => {
@@ -43,7 +66,8 @@
   };
 
   const build = () => {
-    cancelAnimationFrame(raf);
+    pause();
+    stageWidth = stage.clientWidth;
     Composite.clear(engine.world, false, true);
     bodies = [];
     walls = [];
@@ -79,7 +103,7 @@
       return;
     }
 
-    tick();
+    resume();
   };
 
   const pointerPosition = (event) => {
@@ -89,6 +113,8 @@
 
   items.forEach((element) => {
     element.addEventListener('pointerdown', (event) => {
+      // Touch gestures must remain native so the visitor can scroll past the cloud.
+      if (event.pointerType === 'touch' || (event.pointerType === 'pen' && event.isPrimary === false)) return;
       const entry = bodies.find((item) => item.element === element);
       if (!entry) return;
       event.preventDefault();
@@ -154,18 +180,31 @@
   });
 
   const observer = new IntersectionObserver((entries) => {
-    if (started || !entries.some((entry) => entry.isIntersecting)) return;
-    started = true;
-    build();
-    observer.disconnect();
-  }, { threshold: 0.12 });
+    visible = entries.some((entry) => entry.isIntersecting);
+    if (visible && !started) {
+      started = true;
+      build();
+    } else if (visible) {
+      resume();
+    } else {
+      pause();
+    }
+  }, { threshold: 0, rootMargin: '120px 0px 120px 0px' });
 
   observer.observe(stage);
 
+  document.addEventListener('visibilitychange', () => {
+    pageActive = !document.hidden;
+    if (pageActive) resume();
+    else pause();
+  });
+
   let resizeTimer = 0;
   window.addEventListener('resize', () => {
-    if (!started) return;
+    if (!started || Math.abs(stage.clientWidth - stageWidth) < 2) return;
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(build, 160);
+    resizeTimer = setTimeout(() => {
+      if (Math.abs(stage.clientWidth - stageWidth) >= 2) build();
+    }, 200);
   }, { passive: true });
 })();
