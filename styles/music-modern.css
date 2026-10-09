@@ -17,3 +17,20 @@
 .new-music__extended:hover{box-shadow:0 15px 40px rgba(19,18,58,.18)}
 @media(max-width:620px){.new-music{margin:14px 0 55px}.new-music__top>span{font-size:30px}.new-music__top a{font-size:13px}.new-music__extended{min-height:380px;border-radius:28px;padding:28px 22px}.new-music__copy h2{font-size:clamp(47px,13vw,68px)}.new-music__copy{gap:18px}.new-music__cta{margin-top:12px}.new-music__copy p{font-size:17px}}
 @media(prefers-reduced-motion:reduce){.new-music__cta span{transition:none}}
+/* Featured release: functional player, restrained presentation */
+.new-music__extended{display:block;min-height:350px;padding:clamp(26px,4.3vw,58px);border-radius:26px;box-shadow:none}
+.new-music__details{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;width:100%;max-width:820px}
+.new-music__eyebrow{margin:0 0 38px;letter-spacing:.04em;text-transform:none;font-size:14px;font-weight:400;color:#c0bfd2}
+.new-music__extended .track__title{font-size:clamp(48px,7.3vw,102px);line-height:.92;letter-spacing:-.065em;color:#fff;font-weight:500;margin:0 0 54px}
+.new-music__player{display:flex!important;align-items:center;gap:22px;width:min(620px,100%)}
+.new-music__extended .track__play{flex:none;width:54px;height:54px;background:#fff;color:#111}
+.new-music__extended[data-state="playing"] .track__play{background:#fff;color:#111}
+.new-music__extended[data-state="playing"] .track__title{color:#fff}
+.new-music__extended .track__controls,.new-music__extended[data-state="playing"] .track__controls{display:flex;flex:1;flex-direction:column;gap:9px;align-items:stretch;max-height:none;opacity:1;overflow:visible;pointer-events:auto;padding:0}
+.new-music__extended .track__seek{height:4px;background:rgba(255,255,255,.32)}
+.new-music__extended .track__seek::-webkit-slider-thumb{background:#fff}
+.new-music__extended .track__seek::-moz-range-thumb{background:#fff}
+.new-music__extended .track__time,.new-music__extended .track__current::after{color:#c0bfd1}
+.new-music__extended .track__time{align-self:flex-start}
+@media(max-width:620px){.new-music__extended{min-height:330px;padding:27px 23px;border-radius:24px}.new-music__eyebrow{margin-bottom:42px;font-size:12px}.new-music__extended .track__title{font-size:clamp(48px,12vw,70px);margin-bottom:56px}.new-music__player{gap:15px}.new-music__extended .track__play{width:48px;height:48px}.new-music__extended .track__controls{min-width:0}.new-music__extended .track__seek{height:4px;background:rgba(255,255,255,.32)}}
+
