@@ -52,6 +52,15 @@
             </div>
           </section>
 
+          <section class="new-music" aria-labelledby="new-music-title">
+            <div class="new-music__top"><span>Новые треки</span><a href="https://t.me/niktoimiyamusic" target="_blank" rel="noreferrer">слушать в Telegram ↗</a></div>
+            <a class="new-music__extended" href="https://t.me/niktoimiyamusic" target="_blank" rel="noreferrer" aria-label="Открыть новые Extended-версии в музыкальном канале">
+              <canvas class="new-music__stars" aria-hidden="true"></canvas>
+              <div class="new-music__glow" aria-hidden="true"></div>
+              <div class="new-music__copy"><span class="new-music__eyebrow">NEW / EXTENDED</span><h2 id="new-music-title">Faster than time.</h2><p>Extended version · 16 сентября 2026. Больше пространства, больше движения.</p><span class="new-music__cta">открыть музыку <span aria-hidden="true">↗</span></span></div>
+            </a>
+          </section>
+
           <div class="track-toolbar">
             <p class="track-note">
               Архив работ — от ранних набросков до более свежих треков.
@@ -67,6 +76,23 @@
           </div>
 
           <section class="track-groups">
+            <section class="track-group" data-filter-group="dated">
+              <h2 class="track-group__date">16 september 2026</h2>
+              <div class="tracks">
+                <article class="track">
+                  <div class="track__meta">
+                    <p class="track__index">35</p>
+                    <h3 class="track__title">Faster than time (Extended)</h3>
+                  </div>
+                  <div class="track__player">
+                    <button class="track__play" type="button" aria-label="Воспроизвести трек"><svg class="track__icon track__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 5.8c0-.86.94-1.39 1.68-.95l9.22 5.48c.72.43.72 1.47 0 1.9l-9.22 5.48c-.74.44-1.68-.09-1.68-.95V5.8Z"/></svg><svg class="track__icon track__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7.25" y="5.5" width="3.25" height="13" rx="1.15"/><rect x="13.5" y="5.5" width="3.25" height="13" rx="1.15"/></svg></button>
+                    <div class="track__controls"><input class="track__seek" type="range" min="0" max="0" value="0" step="0.1" aria-label="Перемотка трека" /><div class="track__time"><span class="track__current">0:00</span><span class="track__duration">0:00</span></div></div>
+                    <audio preload="none" class="track__audio" data-audio-ready="false"><source data-src="assets/music/Faster%20than%20time%20%28Extended%29.mp3" type="audio/mpeg" /></audio>
+                  </div>
+                </article>
+              </div>
+            </section>
+
             <section class="track-group" data-filter-group="dated">
               <h2 class="track-group__date">15 september 2026</h2>
               <div class="tracks">
@@ -952,8 +978,8 @@
 
           if (!latestTrack || !latestHeading) return;
 
-          latestTrack.classList.add("track--featured");
-          latestHeading.classList.add("track-group__date--release");
+          // The newest releases have their own feature above the archive.
+          // Keep all archived tracks in the same understated layout.
         }
 
         function renumberTracks() {
@@ -1235,5 +1261,6 @@
         }, 140);
       })();
     </script>
+    <script src="scripts/music-stars.js" defer></script>
   </body>
 </html>
