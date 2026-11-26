@@ -16,7 +16,7 @@
   <meta property="og:description" content="Все полезные ссылки уже есть здесь." />
   <meta property="og:url" content="https://niktoimiyazap.github.io/mybio/niktoimiya.html" />
 
-  <link rel="stylesheet" href="styles/niktoimiya.css?v=6" />
+  <link rel="stylesheet" href="styles/niktoimiya.css?v=7" />
 </head>
 <body class="is-intro">
   <main class="page" id="page">
@@ -77,38 +77,40 @@
       </div>
     </header>
 
-    <section class="tile-grid" aria-label="Полезные ссылки">
-      <a
-        class="tile tile--tg"
-        href="https://t.me/niktoimiya"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Telegram"
-        style="--i: 0;"
-      >
-        <span class="tile__icon" aria-hidden="true">
-          <svg viewBox="0 0 240 240" fill="none">
-            <defs>
-              <linearGradient id="tgGrad" x1="120" y1="12" x2="120" y2="228" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#37AEE2" />
-                <stop offset="100%" stop-color="#1E96C8" />
-              </linearGradient>
-            </defs>
-            <rect x="12" y="12" width="216" height="216" rx="60" fill="url(#tgGrad)" />
-            <rect x="13.5" y="13.5" width="213" height="213" rx="58.5" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="3" />
-            <path d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3.2 1 .4 3.1.2 4.7-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 9-6.7Z" fill="#FFFFFF" />
-          </svg>
-        </span>
-        <span class="tile__label">Telegram</span>
-      </a>
+    <a
+      class="tg-capsule"
+      id="tgCapsule"
+      href="https://t.me/nktpub"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Все материалы из видео тут — @nktpub в Telegram"
+    >
+      <canvas class="tg-capsule__particles" id="tgParticles" aria-hidden="true"></canvas>
+      <span class="tg-capsule__badge" aria-hidden="true">
+        <svg viewBox="0 0 240 240" fill="none">
+          <path d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3.2 1 .4 3.1.2 4.7-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 9-6.7Z" fill="#FFFFFF" />
+        </svg>
+      </span>
+      <span class="tg-capsule__text">
+        <span class="tg-capsule__title">Все материалы из видео тут</span>
+        <span class="tg-capsule__handle">@nktpub</span>
+      </span>
+      <span class="tg-capsule__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17 17 7" />
+          <path d="M9 7h8v8" />
+        </svg>
+      </span>
+    </a>
 
+    <section class="tile-grid" aria-label="Полезные ссылки">
       <a
         class="tile tile--tt"
         href="https://www.tiktok.com/@niktoimiya"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="TikTok"
-        style="--i: 1;"
+        style="--i: 0;"
       >
         <span class="tile__icon" aria-hidden="true">
           <svg viewBox="0 0 64 64" fill="none">
@@ -136,7 +138,7 @@
         target="_blank"
         rel="noopener noreferrer"
         aria-label="YouTube"
-        style="--i: 2;"
+        style="--i: 1;"
       >
         <span class="tile__icon" aria-hidden="true">
           <svg viewBox="-3 -13 74 74" fill="none">
@@ -159,7 +161,7 @@
         type="button"
         aria-disabled="true"
         aria-label="Заблокировано"
-        style="--i: 3;"
+        style="--i: 2;"
       >
         <span class="tile__icon tile__icon--lock" aria-hidden="true">
           <svg viewBox="0 0 64 64" fill="none">
@@ -181,6 +183,6 @@
     </section>
   </main>
 
-  <script src="scripts/niktoimiya.js?v=6"></script>
+  <script src="scripts/niktoimiya.js?v=7"></script>
 </body>
 </html>
