@@ -28,15 +28,43 @@
         aria-label="Логотип niktoimiya"
         title="\:"
       >
-        <span class="mark-fx" id="markFx" aria-hidden="true">
-          <span class="mark-ring mark-ring--a"></span>
-          <span class="mark-ring mark-ring--b"></span>
-          <span class="mark-echo" id="markEcho">\:</span>
+        <span class="mark-frame" id="markFrame" aria-hidden="true">
+          <span class="mark-bracket mark-bracket--tl"></span>
+          <span class="mark-bracket mark-bracket--br"></span>
         </span>
-        <span class="mark-stage" id="markStage">
-          <span class="mark-glyph mark-glyph--slash" id="glyphSlash" aria-hidden="true">\</span>
-          <span class="mark-glyph mark-glyph--colon" id="glyphColon" aria-hidden="true">:</span>
-        </span>
+        <svg
+          class="brand-mark"
+          id="brandMark"
+          viewBox="0 0 64 72"
+          fill="none"
+          aria-hidden="true"
+        >
+          <line
+            class="mark-slash-guide"
+            x1="14"
+            y1="10"
+            x2="33"
+            y2="62"
+            stroke="currentColor"
+            stroke-width="1"
+            stroke-linecap="butt"
+          />
+          <line
+            class="mark-slash"
+            id="markSlash"
+            x1="14"
+            y1="10"
+            x2="33"
+            y2="62"
+            stroke="currentColor"
+            stroke-width="6.2"
+            stroke-linecap="butt"
+          />
+          <g class="mark-dots" id="markDots">
+            <circle class="mark-dot mark-dot--top" cx="46" cy="29" r="4.3" fill="currentColor" />
+            <circle class="mark-dot mark-dot--bottom" cx="46" cy="47" r="4.3" fill="currentColor" />
+          </g>
+        </svg>
       </button>
     </div>
 
