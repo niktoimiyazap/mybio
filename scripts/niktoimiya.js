@@ -80,12 +80,12 @@
       return {
         x: Math.random() * width,
         y: randomY ? Math.random() * height : height + 4 + Math.random() * 14,
-        r: 0.9 + Math.random() * 1.9,
-        vx: (Math.random() - 0.35) * 0.24,
-        vy: -(0.16 + Math.random() * 0.34),
-        baseAlpha: 0.22 + Math.random() * 0.45,
+        r: 0.7 + Math.random() * 1.35,
+        vx: (Math.random() - 0.35) * 0.18,
+        vy: -(0.12 + Math.random() * 0.24),
+        baseAlpha: 0.16 + Math.random() * 0.32,
         phase: Math.random() * Math.PI * 2,
-        twinkle: 0.015 + Math.random() * 0.025,
+        twinkle: 0.012 + Math.random() * 0.02,
       };
     }
 
